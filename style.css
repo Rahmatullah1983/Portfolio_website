@@ -1,0 +1,1238 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color:#0a101e;
+    color: #a9adb8;
+    width: 100%;
+    position: relative;
+}
+
+/*nav bar*/
+.nav-bar{
+    position: relative;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 15vh;
+    position: fixed;
+    top: 0; /* Adjust as needed, this will make it stick to the top of the viewport */
+    background: #0a001e;
+    color: white; /* Add background color if necessary */
+    z-index: 100; /* Set a higher z-index to ensure it appears above other elements */
+}
+ 
+.nav-links  a{
+ color: white;
+ font-size: 2rem;
+ text-decoration: none;
+ 
+ }
+ .nav-links ul a:hover{
+    color: #fec544;
+ }
+ .nav-links ul a:active{
+    color: #fec544;
+ }
+.home-img> img{
+    max-width: 100%; /* Ensure the image doesn't exceed the width of its parent */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Remove any extra spacing below the image */
+ 
+   }
+/*
+.nav-links.open{
+    clip-path: circle(10px at 90% -10%);
+    
+    -webkit-clip-path: circle(10px at 90% -10%);
+    
+} */
+/*home section*/
+#home{
+    display:flex ;
+    justify-content: space-between;
+    min-height: 90vh;    
+    width: 90%;
+
+    margin:auto;
+}
+.home-img{
+    display: flex;
+    width: 40rem;
+    height: 100vh;
+    object-fit: cover; 
+    margin-left: 2rem; 
+}
+.home-text{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex: 1 1 40rem;
+    
+}
+.home-text h1{
+    font-size: 5rem;
+}
+.home-text h2{
+    font-size: 2rem;
+    color: #a9adb8;
+}
+.home-text h3{
+    color: #fec544;
+    font-size: 2rem;
+}
+.home-text button{
+    font-size: 2rem;
+    padding: 1rem 5rem;
+    border: none;
+    background: lightblue;
+    border-radius: 50px;
+    margin-top: 5rem;
+}
+.home-text button a{
+    text-decoration: none;
+}
+/* About secction*/
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    min-height: 100vh;
+} 
+    
+    
+   .about> p{
+        position: relative;
+        color:#fec544;
+        font-size: 3rem;
+        margin-top: 5rem;
+        padding-bottom: 5rem;
+        text-align: center;
+
+        }
+        
+.about>p::after {
+    content: "";
+    display: block; /* Make the pseudo-element a block element */
+    width: 20rem;
+    height: 2px;
+    background: #fec544;
+    position: absolute;
+    top: 5rem;
+    left: -4rem;
+    
+}
+
+        
+
+#about{
+    color: white;
+    display: flex;
+    margin-left: 5rem;
+    line-height: 2rem;
+    min-height: 90vh;
+    width: 100%;
+    margin: auto;
+}
+#about h4{
+    padding-bottom: 2rem;
+}
+.about-img{
+display: flex;
+height: 100vh;
+width: 30rem;
+margin-right: 2rem;
+}
+.about-img img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+
+}
+.about-text{
+    padding-top: 2rem;
+    display: flex;
+    flex: 1 1 40rem;
+    height:90vh;
+    flex-direction: column;
+}
+.about .baio {
+    display: flex;  
+    line-height: 3rem;
+    margin-bottom: 2rem;
+}
+.title{
+    margin-right: 4rem;
+}
+.about-btn{
+    width: 12rem;
+    padding:1rem 1rem  ;
+    border-radius: 50px;
+}
+/*Services*/
+#services{
+    width: 90%;
+    margin: auto;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#services>p{
+    text-transform: uppercase;
+     margin-top: 10rem;
+    font-size: 3rem;
+    padding-bottom: 5rem;
+    position: relative;
+    color: #fec544;
+}
+
+
+#services > p::after {
+    content: "";
+    display: block; /* Make the pseudo-element a block element */
+    width: 20rem;
+    height: 2px;
+    background: #fec544;
+    position: absolute;
+    top: 5rem;
+    left: -4rem;
+}
+
+.services{
+    display: grid;
+    min-width: 100%;
+    height: 100%;
+    grid-template-columns:repeat(3, 1fr);
+    /* grid-template-columns: repeat(auto-fill, minmax(350px, 3fr)); */
+   
+    
+}
+.services img{
+    width: 3rem;
+    height: 3rem;
+    background: #a9adb8;
+    margin-bottom: 2rem;
+    
+}
+.image-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 2rem 2rem 2rem;
+    margin: 1rem;
+    background-color:#0a201e;
+    border-radius: 10px;
+    border: 1px solid #a9adb8;
+};
+.image-container:hover .icon-image img {
+    background: #fec544;
+    filter: brightness(1.5); 
+    transition: 1s ease;
+}
+
+.image-container:hover h2 {
+    transition: 1s ease;
+    color:#fec544; 
+};
+ .image-container h2{
+    margin-bottom: 4rem;
+}
+.image-container p{
+    padding: 2rem;
+    line-height: 2rem;
+    letter-spacing: 2px;
+}
+.icon-image{
+    display: flex;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    background:#0a101e;
+    border-radius: 50%;
+}
+.image-container:hover .icon-image{
+    border: 1px solid#fec544;
+    transition: 2s ease;
+    
+}
+/*Skills*/
+#skills{
+    width: 90%;
+    margin: auto;
+}
+
+#skills>p{
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+    margin-left: 50%;
+    transform: translate(50% -50%);
+    font-size: 3rem;
+    color: #fec544;
+    text-transform: uppercase;
+position: relative;
+}
+
+#skills > p::after {
+    content: "";
+    display: block; /* Make the pseudo-element a block element */
+    width: 20rem;
+    height: 2px;
+    background: #fec544;
+    position: absolute;
+    top: 5rem;
+    left: -4rem;
+}
+
+.skills{
+    display: flex;
+    min-height: 90vh;
+    
+}
+.skills-para :nth-child(1){
+    
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+}
+.skills-para :nth-child(2){
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.skills-para{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 40rem;
+
+
+}
+
+.skills-headings{
+    
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 40rem;
+    line-height: 4rem;
+    margin: 2rem 0rem 0rem 1rem;
+    
+
+}
+.skill-box :nth-child(1){
+    display: inline;
+}
+.skill-box :nth-child(2){
+    float: right;
+    display: inline;
+}
+.skill{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 7px;
+    border: 1px solid #0a201e;
+    border-radius: 2px;
+}
+.skill .skill-level{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 5px;
+    background: #fec544;
+    border-radius: 2px;
+}
+/*Resume*/
+
+#resume>p{
+    text-transform: uppercase;
+    margin-top:5rem;
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 50%;
+    transform: translate(50% -50%);
+    font-size: 3rem;
+    color: #fec544;
+position: relative;
+}
+
+#resume > p::after {
+    content: "";
+    display: block; /* Make the pseudo-element a block element */
+    width: 20rem;
+    height: 2px;
+    background: #fec544;
+    position: absolute;
+    top: 5rem;
+    left: -4rem;
+}
+#resume{
+width: 85%;
+margin: auto;
+
+}
+
+
+.resume{
+    display: flex;
+    min-height: 90vh;
+}
+.resume-education{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1 1 40;
+    min-height: 90vh;
+    line-height: 2rem;
+padding-right: 2rem;    
+}
+.education{
+    display: flex;
+    position: absolute; 
+    margin: -1rem 0rem 0rem -2.5rem; 
+}
+.education h1{
+    font-size: 2rem;
+}
+.education img{
+    width: 2rem;
+    background: #a9adb8;
+    margin-right:3rem;
+    
+}
+
+.master::before{
+    content: "";
+    
+    width: 0.2px;
+     height: 96%;
+    background:#a9adb8;
+    position: absolute;
+    margin: 1rem 0rem 0rem -1.5rem;
+}
+ .master h2::before{
+    content:"";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 0.5px solid #a9adb8;
+    z-index: 2;
+    background:#0a101e;
+    margin:  0.5rem 1rem 0rem -2rem;
+}
+.master h2{
+    color: #fec544;
+    margin-top: 3rem;
+}
+
+.bachlar h2::before{
+    content:"";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #0a201e;
+    border: 0.5px solid #a9adb8;
+    margin:  0.5rem 1rem 0rem -2rem;
+}
+.bachlar h2{
+    color: #fec544;
+    margin-top: 3rem;
+}
+
+.diploma h2::before{
+    content:"";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background:#0a101e;
+    border: 2px solid #a9adb8;
+    margin:  0.5rem 1rem 0rem -2rem;
+}
+.diploma h2{
+    color: #fec544;
+    margin-top: 3rem;
+}
+
+
+.resume-experence{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1 1 40;
+    min-height: 90vh;
+    line-height: 2rem;
+    
+}
+.experience{
+    display: flex;
+    position: absolute; 
+    margin: -1rem 0rem 0rem -2.5rem; 
+}
+.experience h1{
+    font-size: 2rem;
+}
+.experience img{
+    width: 2rem;
+    background: #a9adb8;
+    margin-right:3rem;
+    
+}
+
+.designer::before{
+    content: "";
+    
+    width: 0.2px;
+     height: 96%;
+    background:#a9adb8;
+    position: absolute;
+    margin: 1rem 0rem 0rem -1.5rem;
+}
+ .designer h2::before{
+    content:"";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 0.5px solid #a9adb8;
+    z-index: 2;
+    background:#0a101e;
+    margin:  0.5rem 1rem 0rem -2rem;
+}
+.designer h2{
+    color: #fec544;
+    margin-top: 3rem;
+}
+
+.product-designer h2::before{
+    content:"";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #0a201e;
+    border: 0.5px solid #a9adb8;
+    margin:  0.5rem 1rem 0rem -2rem;
+}
+.product-designer h2{
+    color: #fec544;
+    margin-top: 3rem;
+}
+
+.trucker h2::before{
+    content:"";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background:#0a101e;
+    border: 2px solid #a9adb8;
+    margin:  0.5rem 1rem 0rem -2rem;
+}
+.trucker h2{
+    color: #fec544;
+    margin-top: 3rem;
+}
+/*potfolio*/
+#portfolio{
+    position: relative;
+    display: flex;
+    flex-direction:column ;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+#portfolio>p{
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+    margin-left: 50%;
+    transform: translate(50% -50%);
+    font-size: 3rem;
+    color: #fec544;
+    text-transform: uppercase;
+position: relative;
+}
+
+#portfolio > p::after {
+    content: "";
+    display: block; /* Make the pseudo-element a block element */
+    width: 20rem;
+    height: 2px;
+    background: #fec544;
+    position: absolute;
+    top: 5rem;
+    left: -2rem;
+}
+/* .portfolio div{
+    position: relative;
+} */
+.portfolio{
+    position: relative;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap:1rem;
+    grid-row-gap:1rem;
+
+}
+.portfolio img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+.portfolio .modal:hover img {
+    transform: scale(1.05);
+    transition: 0.5s  ease-in-out; 
+}
+/* .portfolio .modal :hover{
+    background: #a9adb8;
+    opacity: 0.8;
+} */
+/* .portfolio div {
+    position: relative;
+    overflow: hidden;
+} */
+
+.mdl{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rems;
+    width: 60%;
+    margin: auto;
+    height: 100vh;
+    background: white;
+    border-radius: 15px;
+    z-index: 1000;
+}  
+.mdl img{
+    height: 80%;
+    
+}
+.heading{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    margin: auto;
+    border-bottom: 0.1px solid #00000070;
+} 
+.mdl .heading h1{
+    display: inline-block;
+    color: black;
+    padding-left: 2rem;
+}
+.close-btn{
+    padding: 1rem 2rem;
+    float: right;
+    color: black;
+    font-size:larger ;
+    background: none;
+    border: none;
+}
+.footer{
+    width: 100%;
+    background: white;
+    border-bottom: 15px;
+}
+.mdl .footer p{
+    font-size: 2rem;
+    color:white;
+    text-align: center;
+}
+.modal{
+    position: relative;
+}
+.hover-element{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background:#a9adb8;
+    pointer-events: none;
+    opacity: 0.2;
+    border: 2px solid white;
+    transition: 5s ease;
+}
+/*contact*/
+#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:90%;
+    min-height: 90vh;
+    margin: auto;
+    margin-bottom: 5rem;
+}  
+#contact> p{
+    color:#fec544;
+    font-size: 3rem;
+    text-transform: uppercase;
+    position: relative;
+}
+#contact> p::after {
+    content: "";
+    position: absolute;
+    top: 70px;
+    left: -2rem;
+    width: 130%;
+    height: 2px;
+    background: #fec544;
+
+}
+.contact{
+    display: flex;
+    width: 100%;
+    min-height:100vh
+
+}
+.info{
+    width: 50%;
+    padding: 5rem 5rem  5rem 0rem;
+}
+.contact-info{
+    width: 50%;
+    padding-top: 5rem;
+    
+}
+.contact-info h1{
+    padding-bottom: 2rem;
+}
+.contact-info >p{
+    padding-bottom: 2rem;
+}
+.email{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.image{
+    position: relative;
+    border: 2px solid #a9adb8;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    color: #a9adb8;
+}
+.email:hover .image{
+    border: 2px solid #fec544;
+    transition: .05s ease;
+}
+.image img{
+    width: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: brightness(0) invert(1);
+}
+.text{
+    margin-left: 2rem;
+}
+.email h2{
+    color: whites;
+}
+.phone{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.phone:hover .image{
+    border: 2px solid #fec544;
+    transition: .05s ease;
+}
+.phone h2{
+    color: white;
+}
+.address{
+    display: flex;
+    
+}
+
+.address:hover .image{
+    border: 2px solid #fec544;
+    transition: .05s ease;
+}
+.address h2{
+    color: white;
+}
+
+form {
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #0a201e;
+    border: none;
+    border: 0.1px solid #a9adb8;
+    margin-bottom: 30px;
+    padding: 2rem;
+}
+button {
+    background-color: #fec544;
+    color: black;
+    padding: 1rem 4rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffda70; /* Background color for the hover effect */
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+    transition: transform 0.4s ease;
+}
+
+button:hover::before {
+    transform: scaleX(1);
+    transform-origin: 0% 50%;
+}
+.social{
+    position: relative;
+display: flex;
+flex-direction: column;
+margin-top: 2rem;
+}
+.social>p{
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+   
+    
+}
+.social-image{
+    display: flex;
+    justify-content: space-between;
+    width: 100% ;
+}
+
+.dribbble{
+    
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #a9adb8;
+    border-radius: 50px;
+    width: auto;
+    position: relative;
+    padding: 0.5rem;
+    margin-right: 1.5rem;
+}
+.dribbble img{
+    filter: brightness(0) invert(1);
+    width: 2rem;
+
+}
+.dribbble>p{
+    display: none;
+}
+.dribbble:hover p{
+    color: white;
+    display: inline;
+    padding: 0rem 1rem 0rem 1rem;
+
+}
+
+.behance{
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #a9adb8;
+    border-radius: 50px;
+    width: auto;
+    position: relative;
+    padding: 0.5rem;
+    margin-right: 1.5rem;
+}
+.behance img{
+    filter: brightness(0) invert(1);
+width: 2rem;
+}
+.behance>p{
+    display: none;
+}
+.behance:hover p{
+    color: white;
+    display: inline;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.twitter{
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #a9adb8;
+    border-radius: 50px;
+    width: auto;
+    position: relative;
+    padding: 0.5rem;
+    margin-right: 1.5rem;
+}
+.twitter img{
+    filter: brightness(0) invert(1);
+width:2rem ;
+}
+.twitter>p{
+    display: none;
+}
+.twitter:hover p{
+    color: white;
+    display: inline;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.linkdin{
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #a9adb8;
+    border-radius: 50px;
+    width: auto;
+    position: relative;
+    padding: 0.5rem;
+}
+.linkdin img{
+    filter: brightness(0) invert(1);
+width: 2rem;
+}
+.linkdin>p{
+    display: none;
+}
+.linkdin:hover p{
+    display: inline;
+    padding: 0rem 1rem 0rem 1rem;
+    color: white;
+}
+.footer>p{
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1rem;
+    background: #0a001e;
+}
+
+@media  (max-width:1600px){
+    .home-img{
+        background-color:#0a101e;
+        width: 30rem;
+    
+    
+    }
+}
+@media  (max-width:1024px){
+    body{
+        background-color:#0a101e;
+        width: 100%;
+        overflow-x: hidden;
+        position: relative;
+    
+    }
+    
+/*burger*/
+.burger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: 1000;
+
+
+}
+span{
+    border-radius: 5px;
+    width: 4rem;
+    height: 0.3rem;
+    margin: 0.2rem;
+    background:white;  
+    
+}
+
+.slide-active-1{
+    transform: rotateZ(45deg) translateY(300%)
+}
+
+.slide-active-3{
+
+    transform: rotateZ(-45deg) translateY(-300%);
+}
+
+.slide-active-2{
+    opacity: 0;
+ }
+ .nav-links{
+    
+    clip-path: circle(1000px at 90% -10%);
+   
+    -webkit-clip-path: circle(10px at 90% -10%); 
+}  
+.nav-links.open{
+
+    transition: all 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: black;
+    min-width: 100vw;
+    align-items: center;
+    top: 0%;
+    left: 0%;
+    position: fixed;
+     clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%); 
+} 
+    .home-img{
+        display: none;
+        visibility: hidden;
+    }
+    .home-img img{
+        display: none;
+    } 
+
+    #home{
+        height: auto;
+        width: 90%;
+        margin: auto;
+        padding: 0%;
+    }
+    
+    .home .home-text{
+        display: flex;
+        flex: 1;
+        
+    }
+    #about{
+        height: auto;
+    }
+    .about-text{
+    
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
+    }
+    .about-img{
+        width: 100%;
+    }
+    #about{
+        flex-wrap: wrap;
+        height: 250vh;
+
+    }
+    /*services section*/
+    .services{
+        display: grid;
+        min-width: 100%;
+        min-height: 100vh;
+        grid-template-columns:repeat(2, 1fr) ;
+        /* grid-template-columns: repeat(auto-fill, minmax(350px, 3fr)); */
+       
+        
+    }
+    
+.image-container p{
+    padding: 0rem;
+    line-height: 2rem;
+    letter-spacing: 0.5px;
+}
+    /*Skills section*/
+    .skills{
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 90vh;
+        
+    }
+   /* resume*/
+   
+.resume{
+    display:flex;
+    flex-wrap: wrap;
+    width: 90%;
+}
+.resume-experence{
+    margin-top: 5rem;
+}
+.resume-education{
+width: 100%;
+}
+.resume-experence{
+width: 100%;
+}
+.portfolio{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+ }
+.contact .info{
+    width:100%;
+    padding: 5em 0rem;
+    margin-right: 1rem;
+}
+.contact-info{
+width: 100% !important;
+}
+}
+
+    @media  (max-width:600px){
+        body{
+            overflow-x: hidden;
+        }
+        
+        #about{
+       height: 170vh;
+
+        }
+        .about-img{
+            height: 50vh;
+            margin-bottom: 4rem;
+        }
+        .about-text{
+        height: 50vh;
+        }
+        .services{
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+        }
+        #services{
+            margin-bottom: 5rem;
+            min-height: 90vh;
+            width: 100%;
+            
+            
+        }
+        .image-container {
+        padding: 1rem;
+        }
+        .portfolio{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+        
+         
+.resume-experence{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1 1 40;
+    min-height: 90vh;
+    line-height: 2rem;
+    
+}
+#home{
+margin-bottom: 5rem;
+width: 100%;
+}
+
+#about{
+    margin-bottom: 5rem;
+    width: 100%;
+    }
+    
+
+#skills{
+    margin-bottom: 5rem;
+    width: 100%;
+    padding: 2rem;
+    }
+    #resume{
+        padding: 4rem;
+    }
+    
+#portfolio{
+    margin-bottom: 5rem;
+    width: 100%;
+    padding: 2rem;
+    }
+    
+#contact{
+    margin-bottom: 5rem;
+    width: 100%;
+    padding: 2rem;
+    }
+    
+    
+    
+#skills>p{
+    width: 40%;
+    margin: auto;
+}
+
+
+#resume{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 5rem;
+    
+    }
+    #resume>p{
+        width: 40%;
+        margin: auto;
+    }
+    
+        
+#portfolio>p{
+    margin: auto;
+    font-size: 3rem;
+    color: #fec544;
+    text-transform: uppercase;
+position: relative;
+}
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+ }
+.contact .info{
+    width:100%;
+    padding: 5em 0rem;
+}
+.contact-info{
+width: 100% !important;
+} 
+    }
